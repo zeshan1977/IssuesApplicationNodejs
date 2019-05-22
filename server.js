@@ -6,7 +6,7 @@ const app = express();
 
 // parse application/x-www-form-urlencoded
 //app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // parse application/json
 app.use(bodyParser.json())
@@ -36,7 +36,8 @@ mongoose.connect(dbConfig.url, {
 
 // define a simple route
 app.get('/', (req, res) => {
-        res.json({"message": "Incident Manager!. Manage incidents , search,add,update,delete,create new by duplicating"});
+    let dSdate= new Date;
+    res.json({"message": dSdate + '|Incident Manager!. Manage incidents , search,add,update,delete,create new by duplicating' });
 });
 
 require('./app/routes/note.routes.js')(app);

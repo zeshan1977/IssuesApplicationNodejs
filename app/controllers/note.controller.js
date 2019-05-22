@@ -3,6 +3,7 @@ const Note = require('../models/note.model.js');
 // Create and Save a new Note
 exports.create = (req, res) => {
     // Validate request
+    console.log(req.content);
     if(!req.body.content) {
         return res.status(400).send({
             message: "Issue content can not be empty"
@@ -13,8 +14,7 @@ exports.create = (req, res) => {
     const note = new Note({
         title: req.body.title || "Untitled Note", 
         content: req.body.content,
-        pnemonic:req.body.pnemonic,
-        myDate:  new Date() 
+        pnemonic:req.body.pnemonic
     });
 
     // Save Issue in the database

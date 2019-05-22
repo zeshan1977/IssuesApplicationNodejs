@@ -12,8 +12,7 @@ module.exports = mongoose.model('Note', NoteSchema);
 const IssueSchema = mongoose.Schema({
     pnemonic:String,
     title: String,
-    content: String,
-    mydate : Date
+    content: String
 }, {
     timestamps: true
 });

@@ -1,0 +1,2154 @@
+ 
+<!DOCTYPE html>
+<html class="html" lang="en-US" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/WebPage">
+<head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<title>How to create Restful CRUD API with Node.js MongoDB and Express.js - ZeptoBook</title>
+<link rel="pingback" href="https://www.zeptobook.com/xmlrpc.php">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This site is optimized with the Yoast SEO plugin v11.1.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Create Restful CRUD API with Node.js MongoDB and Express.js. Perform CRUD operations using Node.js Restful APIs. Enable CORS also in API"/>
+<link rel="canonical" href="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to create Restful CRUD API with Node.js MongoDB and Express.js - ZeptoBook" />
+<meta property="og:description" content="Create Restful CRUD API with Node.js MongoDB and Express.js. Perform CRUD operations using Node.js Restful APIs. Enable CORS also in API" />
+<meta property="og:url" content="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/" />
+<meta property="og:site_name" content="ZeptoBook" />
+<meta property="article:publisher" content="https://www.facebook.com/zeptobook/" />
+<meta property="article:author" content="https://www.facebook.com/zeptobook/" />
+<meta property="article:tag" content="Express" />
+<meta property="article:tag" content="MongoDB" />
+<meta property="article:tag" content="Mongoose" />
+<meta property="article:tag" content="Node.js" />
+<meta property="article:tag" content="Rest API" />
+<meta property="article:section" content="Node.js" />
+<meta property="article:published_time" content="2019-01-06T15:30:33+00:00" />
+<meta property="article:modified_time" content="2019-02-09T02:43:54+00:00" />
+<meta property="og:updated_time" content="2019-02-09T02:43:54+00:00" />
+<meta property="og:image" content="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&#038;ssl=1" />
+<meta property="og:image:secure_url" content="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&#038;ssl=1" />
+<meta property="og:image:width" content="728" />
+<meta property="og:image:height" content="360" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Create Restful CRUD API with Node.js MongoDB and Express.js. Perform CRUD operations using Node.js Restful APIs. Enable CORS also in API" />
+<meta name="twitter:title" content="How to create Restful CRUD API with Node.js MongoDB and Express.js - ZeptoBook" />
+<meta name="twitter:site" content="@zeptobook" />
+<meta name="twitter:image" content="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&#038;ssl=1" />
+<meta name="twitter:creator" content="@zeptobook" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.zeptobook.com/#website","url":"https://www.zeptobook.com/","name":"ZeptoBook","publisher":{"@id":"https://www.zeptobook.com/#person"},"potentialAction":{"@type":"SearchAction","target":"https://www.zeptobook.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#webpage","url":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/","inLanguage":"en-US","name":"How to create Restful CRUD API with Node.js MongoDB and Express.js - ZeptoBook","isPartOf":{"@id":"https://www.zeptobook.com/#website"},"image":{"@type":"ImageObject","@id":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#primaryimage","url":"https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&ssl=1","width":728,"height":360,"caption":"restful crud api node.js MongoDB express.js"},"primaryImageOfPage":{"@id":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#primaryimage"},"datePublished":"2019-01-06T15:30:33+00:00","dateModified":"2019-02-09T02:43:54+00:00","description":"Create Restful CRUD API with Node.js MongoDB and Express.js. Perform CRUD operations using Node.js Restful APIs. Enable CORS also in API"},{"@type":"Article","@id":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#article","isPartOf":{"@id":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#webpage"},"author":{"@id":"https://www.zeptobook.com/author/admin/#author","name":"Adesh"},"publisher":{"@id":"https://www.zeptobook.com/#person"},"headline":"How to create Restful CRUD API with Node.js MongoDB and Express.js","datePublished":"2019-01-06T15:30:33+00:00","dateModified":"2019-02-09T02:43:54+00:00","commentCount":"20","mainEntityOfPage":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#webpage","image":{"@id":"https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#primaryimage"},"keywords":"Express,MongoDB,Mongoose,Node.js,Rest API","articleSection":"MongoDB,Node.js,NPM"},{"@type":"Person","@id":"https://www.zeptobook.com/author/admin/#author","name":"Adesh","image":{"@type":"ImageObject","@id":"https://www.zeptobook.com/#personlogo","url":"https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=96&r=g","caption":"Adesh"},"description":"Hi, I am Adesh. I am a senior software engineer having more than 12 years of software development experience. I am a full stack developer and interested in writing the technical post on programming. I am currently working in New York City area.","sameAs":["https://www.facebook.com/zeptobook/","https://twitter.com/zeptobook"]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="ZeptoBook &raquo; Feed" href="https://www.zeptobook.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ZeptoBook &raquo; Comments Feed" href="https://www.zeptobook.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ZeptoBook &raquo; How to create Restful CRUD API with Node.js MongoDB and Express.js Comments Feed" href="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.6.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.6.0';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-127807835-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-127807835-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.zeptobook.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://c0.wp.com/c/5.2.1/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://c0.wp.com/c/5.2.1/wp-includes/css/dist/block-library/theme.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='email-subscribers-css'  href='https://www.zeptobook.com/wp-content/plugins/email-subscribers/public/css/email-subscribers-public.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://c0.wp.com/c/5.2.1/wp-includes/css/dashicons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='post-views-counter-frontend-css'  href='https://www.zeptobook.com/wp-content/plugins/post-views-counter/css/frontend.css?ver=1.2.14' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/css/third/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-line-icons-css'  href='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/css/third/magnific-popup.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css'  href='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/css/third/slick.min.css?ver=1.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css'  href='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.6.7' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_facebook_likebox-css'  href='https://c0.wp.com/p/jetpack/7.3/modules/widgets/facebook-likebox/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='https://c0.wp.com/p/jetpack/7.3/_inc/social-logos/social-logos.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://c0.wp.com/p/jetpack/7.3/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://c0.wp.com/c/5.2.1/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.2.1/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/related-posts/related-posts.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"[]","home_url":"https:\/\/www.zeptobook.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.zeptobook.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.6.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var es_data = {"messages":{"es_empty_email_notice":"Please enter email address","es_rate_limit_notice":"You need to wait for sometime before subscribing again","es_single_optin_success_message":"Successfully Subscribed.","es_double_optin_success_message":"Your subscription was successful! Kindly check your mailbox and confirm your subscription. If you don't see the email within a few minutes, check the spam\/junk folder.","es_email_exists_notice":"Email Address already exists!","es_unexpected_error_notice":"Oops.. Unexpected error occurred.","es_invalid_email_notice":"Invalid email address","es_try_later_notice":"Please try after some time"},"es_ajax_url":"https:\/\/www.zeptobook.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.zeptobook.com/wp-content/plugins/email-subscribers/public/js/email-subscribers-public.js'></script>
+<link rel='https://api.w.org/' href='https://www.zeptobook.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.zeptobook.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.zeptobook.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.1" />
+<link rel='shortlink' href='https://wp.me/panA4M-dM' />
+<link rel="alternate" type="application/json+oembed" href="https://www.zeptobook.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.zeptobook.com%2Fhow-to-create-restful-crud-api-with-node-js-mongodb-and-express-js%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.zeptobook.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.zeptobook.com%2Fhow-to-create-restful-crud-api-with-node-js-mongodb-and-express-js%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<link rel='dns-prefetch' href='//c0.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+					<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<link rel="icon" href="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/10/cropped-zeptologo_icon.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/10/cropped-zeptologo_icon.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/10/cropped-zeptologo_icon.png?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/10/cropped-zeptologo_icon.png?fit=270%2C270&#038;ssl=1" />
+			<style type="text/css" id="wp-custom-css">
+				code{padding:2px;font-size:90%;color:#0a80ea;background:rgba(0,0,0,.05);white-space:nowrap;border-radius:4px;font-family:Menlo,Monaco,"Courier New",Courier,monospace}			</style>
+		<!-- OceanWP CSS -->
+<style type="text/css">
+.page-header{background-color:#1e73be}/* General CSS */a{color:#1e73be}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{color:#ffffff}#scroll-top{bottom:109px}.page-numbers a,.page-numbers span:not(.elementor-screen-only),.page-links span{background-color:#1e73be}.page-numbers a,.page-numbers span:not(.elementor-screen-only),.page-links span{color:#ffffff}/* Header CSS */#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#1e73be}/* Footer Widgets CSS */#footer-widgets{background-color:#1e73be}#footer-widgets,#footer-widgets p,#footer-widgets li a:before,#footer-widgets .contact-info-widget span.oceanwp-contact-title,#footer-widgets .recent-posts-date,#footer-widgets .recent-posts-comments,#footer-widgets .widget-recent-posts-icons li .fa{color:#ffffff}#footer-widgets li,#footer-widgets #wp-calendar caption,#footer-widgets #wp-calendar th,#footer-widgets #wp-calendar tbody,#footer-widgets .contact-info-widget i,#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"],#footer-widgets .posts-thumbnails-widget li,#footer-widgets .social-widget li a{border-color:#ffffff}/* Footer Bottom CSS */#footer-bottom{background-color:#2192d3}#footer-bottom,#footer-bottom p{color:#ffffff}#footer-bottom a,#footer-bottom #footer-bottom-menu a{color:#1120c6}#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover{color:#ffffff}/* Typography CSS */body{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-size:16px;color:#353535}h2{color:#1e73be}h3{color:#1e73be}h4{color:#1e73be}.blog-entry.post .blog-entry-header .entry-title a{font-family:Arial,Helvetica,sans-serif}.single-post .entry-title{font-family:Arial,Helvetica,sans-serif}
+</style></head>
+
+<body class="post-template-default single single-post postid-854 single-format-standard wp-embed-responsive oceanwp-theme sidebar-mobile boxed-layout wrap-boxshadow default-breakpoint has-sidebar content-right-sidebar post-in-category-mongodb post-in-category-node-js post-in-category-npm has-topbar has-breadcrumbs elementor-default">
+
+	
+	<div id="outer-wrap" class="site clr">
+
+		
+		<div id="wrap" class="clr">
+
+			
+
+<div id="top-bar-wrap" class="clr">
+
+	<div id="top-bar" class="clr container has-no-content">
+
+		
+		<div id="top-bar-inner" class="clr">
+
+			
+
+<div id="top-bar-social" class="clr top-bar-right">
+
+	<ul class="clr">
+
+		<li class="oceanwp-twitter"><a href="https://twitter.com/ZeptoBook" title="Twitter" target="_blank"><span class="fa fa-twitter"></span></a></li><li class="oceanwp-facebook"><a href="https://www.facebook.com/zeptobook/" title="Facebook" target="_blank"><span class="fa fa-facebook"></span></a></li><li class="oceanwp-googleplus"><a href="https://plus.google.com/u/4/106578662562289635118" title="Google Plus" target="_blank"><span class="fa fa-google-plus"></span></a></li><li class="oceanwp-pinterest"><a href="https://www.pinterest.com/zeptobook/" title="Pinterest" target="_blank"><span class="fa fa-pinterest-p"></span></a></li><li class="oceanwp-tumblr"><a href="https://www.tumblr.com/blog/zeptobook" title="Tumblr" target="_blank"><span class="fa fa-tumblr"></span></a></li><li class="oceanwp-email"><a href="mailto:z&#101;&#112;t&#111;&#98;&#111;&#111;kus&#97;&#64;g&#109;&#97;&#105;&#108;&#46;co&#109;" title="Email" target="_self"><span class="fa fa-envelope"></span></a></li>
+	</ul>
+
+</div><!-- #top-bar-social -->
+		</div><!-- #top-bar-inner -->
+
+		
+	</div><!-- #top-bar -->
+
+</div><!-- #top-bar-wrap -->
+
+
+			
+<header id="site-header" class="minimal-header effect-ten clr" data-height="74" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+	
+		
+			
+			<div id="site-header-inner" class="clr container">
+
+				
+				
+
+<div id="site-logo" class="clr" itemscope itemtype="http://schema.org/Brand">
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		
+			<a href="https://www.zeptobook.com/" rel="home" class="site-title site-logo-text">ZeptoBook</a>
+
+		
+	</div><!-- #site-logo-inner -->
+
+	
+	
+</div><!-- #site-logo -->
+
+			<div id="site-navigation-wrap" class="clr">
+		
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+				<ul id="menu-primary" class="main-menu dropdown-menu sf-menu"><li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-297"><a href="https://www.zeptobook.com/" class="menu-link"><span class="text-wrap">Home</span></a></li><li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a href="https://www.zeptobook.com/about/" class="menu-link"><span class="text-wrap">About</span></a></li><li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-12"><a href="https://www.zeptobook.com/blog/" class="menu-link"><span class="text-wrap">Blog</span></a></li><li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="https://www.zeptobook.com/contact/" class="menu-link"><span class="text-wrap">Contact</span></a></li><li id="menu-item-925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-925"><a href="https://www.zeptobook.com/privacy/" class="menu-link"><span class="text-wrap">Privacy Policy</span></a></li><li class="search-toggle-li"><a href="#" class="site-search-toggle search-dropdown-toggle"><span class="icon-magnifier"></span></a></li></ul>
+<div id="searchform-dropdown" class="header-searchform-wrap clr">
+	
+<form method="get" class="searchform" id="searchform" action="https://www.zeptobook.com/">
+	<input type="text" class="field" name="s" id="s" placeholder="Search">
+	</form></div><!-- #searchform-dropdown -->
+			</nav><!-- #site-navigation -->
+
+			
+			
+					</div><!-- #site-navigation-wrap -->
+		
+		
+	
+				
+	<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+		
+		
+		
+		<a href="#" class="mobile-menu">
+							<i class="fa fa-bars"></i>
+							<span class="oceanwp-text">Menu</span>
+
+						</a>
+
+		
+		
+		
+	</div><!-- #oceanwp-mobile-menu-navbar -->
+
+
+			</div><!-- #site-header-inner -->
+
+			
+			
+		
+				
+	
+</header><!-- #site-header -->
+
+
+						
+			<main id="main" class="site-main clr" >
+
+				
+
+<header class="page-header">
+
+	
+	<div class="container clr page-header-inner">
+
+		
+			<h1 class="page-header-title clr" itemprop="headline">Blog</h1>
+
+			
+		
+		<nav aria-label="Breadcrumbs" class="site-breadcrumbs clr" itemprop="breadcrumb"><ol class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="3" /><meta name="itemListOrder" content="Ascending" /><li class="trail-item trail-begin" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.zeptobook.com" rel="home" aria-label="Home" itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name"><span class="icon-home"></span><span class="breadcrumb-home has-icon">Home</span></span></a><span class="breadcrumb-sep">></span><meta content="1" itemprop="position" /></li><li class="trail-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.zeptobook.com/category/node-js/" itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name">Node.js</span></a><span class="breadcrumb-sep">></span><meta content="2" itemprop="position" /></li><li class="trail-item trail-end" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/" itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name">How to create Restful CRUD API with Node.js MongoDB and Express.js</span></a><meta content="3" itemprop="position" /></li></ol></nav>
+	</div><!-- .page-header-inner -->
+
+	
+	
+</header><!-- .page-header -->
+
+
+	
+	<div id="content-wrap" class="container clr">
+
+		
+		<div id="primary" class="content-area clr">
+
+			
+			<div id="content" class="site-content clr">
+
+				
+				
+<article id="post-854">
+
+	
+<div class="thumbnail">
+
+	<img width="728" height="360" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&amp;ssl=1" class="attachment-full size-full wp-post-image jetpack-lazy-image" alt="How to create Restful CRUD API with Node.js MongoDB and Express.js" itemprop="image" data-attachment-id="900" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/restfulapis_nodejs__mongodb_large/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&amp;ssl=1" data-orig-size="728,360" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="RESTfulAPIs_NodeJS__mongodb_large" data-image-description="&lt;p&gt;How to create Restful CRUD API with Node.js MongoDB and Express.js&lt;/p&gt;
+" data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=300%2C148&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&amp;ssl=1" data-lazy-srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?w=728&amp;ssl=1 728w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?resize=300%2C148&amp;ssl=1 300w" data-lazy-sizes="(max-width: 728px) 100vw, 728px" data-lazy-src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/RESTfulAPIs_NodeJS__mongodb_large.png?fit=728%2C360&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />		<div class="thumbnail-caption">
+			Image: Adrian Mejia		</div>
+	
+</div><!-- .thumbnail -->
+
+<header class="entry-header clr">
+	<h2 class="single-post-title entry-title" itemprop="headline">How to create Restful CRUD API with Node.js MongoDB and Express.js</h2><!-- .single-post-title -->
+</header><!-- .entry-header -->
+
+
+
+<ul class="meta clr">
+
+	
+					<li class="meta-author" itemprop="name"><i class="icon-user"></i><a href="https://www.zeptobook.com/author/admin/" title="Posts by Adesh" rel="author"  itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">Adesh</a></li>
+		
+		
+		
+		
+	
+		
+					<li class="meta-date" itemprop="datePublished"><i class="icon-clock"></i>January 6, 2019</li>
+		
+		
+		
+	
+		
+		
+					<li class="meta-cat"><i class="icon-folder"></i><a href="https://www.zeptobook.com/category/mongodb/" rel="category tag">MongoDB</a> <span class="owp-sep">/</span> <a href="https://www.zeptobook.com/category/node-js/" rel="category tag">Node.js</a> <span class="owp-sep">/</span> <a href="https://www.zeptobook.com/category/npm/" rel="category tag">NPM</a></li>
+		
+		
+	
+		
+		
+		
+					<li class="meta-comments"><i class="icon-bubble"></i><a href="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#comments" class="comments-link local" >20 Comments</a></li>
+		
+		
+</ul>
+
+
+
+<div class="entry-content clr" itemprop="text">
+	
+<p>In this blog, we are going to learn how to perform CRUD (Create, Read, Update and Delete) operations with the help of Rest API using Node.js, MongoDB as our database, and Expess.</p>
+
+
+
+<h2>REST</h2>
+
+
+
+<p>In simple terms, <em>REST</em> stands for <strong>R</strong>epresentational <strong>S</strong>tate <strong>T</strong>ransfer. It is an architectural style design for distributed hypermedia, or an Application Programming Interface (API). In REST, we use various standard <code>HTTP</code> methods like <code>GET</code>, <code>POST</code>, <code>PUT</code> and <code>DELETE</code> to perform any <code>CRUD</code> operation on resource.</p>
+
+
+
+<h2>Resource</h2>
+
+
+
+<p>In <code>REST</code>, everything is <code>Resource</code>. A resource can be an image, document, a temporary service, a collection of other resource, and any other object.  Each resource has resource identifier to identify it. </p>
+
+
+
+<h2>HTTP Methods for CRUD</h2>
+
+
+
+<p>As per <code>REST</code> guidelines, we should use only <code>HTTP</code> methods to perform <code>CRUD</code> operation on any resource. In this blog, we are going to use 4 HTTP methods  like <code>GET</code>, <code>POST</code>, <code>PUT</code> and <code>DELETE</code> to make our <code>REST</code> API.</p>
+
+
+
+<p>Let&#8217;s have a brief introduction of each http method here.</p>
+
+
+
+<ul><li><strong>HTTP GET</strong></li></ul>
+
+
+
+<p>The <code>HTTP GET</code> is used to <code>Read</code> or <code>Retrieve</code> any resource. It returns the XML or JSON data with HTTP status code of 200. GET method is considered as safe, because we are just getting or reading the resource data, not doing any changes in the resource data. </p>
+
+
+
+<ul><li><strong>HTTP POST</strong></li></ul>
+
+
+
+<p>The <code>HTTP POST</code> is used to <code>Create</code> a new resource. On successful creation of resource, it will return HTTP status code of 201, a Location header with a link to the newly created resource.</p>
+
+
+
+<ul><li><strong>HTTP PUT</strong></li></ul>
+
+
+
+<p>The <code>HTTP PUT</code> is used to <code>Update</code> any existing resource. On successful, it will return HTTP status code of 200.</p>
+
+
+
+<ul><li><strong>HTTP DELETE</strong></li></ul>
+
+
+
+<p>The <code>HTTP DELETE</code>, as the name suggests, is used to <code>Delete</code> any existing resource. On successful, it will return HTTP status code of 200.</p>
+
+
+
+<table class="wp-block-table"><tbody><tr><td><strong>HTTP Methods</strong></td><td><strong>CRUD</strong></td><td><strong>Status Code</strong></td></tr><tr><td>GET</td><td>Read</td><td>200 (OK), 404 (Not Found)</td></tr><tr><td>POST</td><td>Create</td><td>201 (OK), 404 (Not Found), </td></tr><tr><td>PUT</td><td>Update</td><td>200 (OK), 204 (No Content), 404 (Not Found)</td></tr><tr><td>DELETE</td><td>Delete</td><td>200 (OK), 404 (Not Found)</td></tr></tbody></table>
+
+
+
+<p>Let&#8217;s move forward into the details of other pieces of creating our REST API.</p>
+
+
+
+<h2>Express.js</h2>
+
+
+
+<p>We are going to use <em><a href="https://expressjs.com/">Express.js</a></em> or simply <em><a href="https://expressjs.com/">Express</a></em>. It is a web application framework for Node.js. It has been released as free and open source software. You can create web application and APIs using Express. It has support for routing, middleware, view system etc. </p>
+
+
+
+<h2>Mongoose</h2>
+
+
+
+<p><em><a href="https://mongoosejs.com/docs/">Mongoose</a></em> is <em>Object Document Mapping</em> or <em>ODM</em> tool for Node.js and MongoDB. Mongoose provide a straight-forward, schema based solution to model to your application data. It includes built-in type casting, validation, query building, business logic hooks and many more. </p>
+
+
+
+<h2>Prerequisites</h2>
+
+
+
+<p>You must have Node.js and MongoDB installed on your machine. Click the below links, if you don&#8217;t have any one of them.</p>
+
+
+
+<p><a href="https://nodejs.org/en/download/">Install Node.js</a></p>
+
+
+
+<p><a href="https://www.mongodb.com/download-center">Install MongoDB</a></p>
+
+
+
+<blockquote class="wp-block-quote"><p>For MongoDB, I am using <a href="https://mlab.com/">mLab</a> free account for online MongoDB database. You can try this one as well, instead of installing on your local machine.</p></blockquote>
+
+
+
+<p><a href="https://mlab.com/">Database-as-a-Service for MongoDB</a></p>
+
+
+
+<p><a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en">Install Postman &#8211; Google Chrome</a> for testing purpose.</p>
+
+
+
+<p>After setting up prerequisites, let move forward to build our application.</p>
+
+
+
+<h2>Application Introduction</h2>
+
+
+
+<p>In our application, we are going to create a product based application. We will use REST APIs to create, update, get and delete the product. Let&#8217;s go to create our application.</p>
+
+
+
+<h3>1. Create package.json</h3>
+
+
+
+<p>Let&#8217;s create a folder, and start with creating <code>package.json</code> file first. Use this command in your terminal window.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>npm init</p></blockquote>
+
+
+
+<h4>package.json</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/da4de42fc972765c4ad72029808f6ecb.js"></script>
+
+
+
+<p>If you notice line 5, we have defined <code>server.js</code> as our main entry point.</p>
+
+
+
+<h3>2. Install Packages</h3>
+
+
+
+<p>Let&#8217;s install all the <code>express</code>, <code>mongoose</code> and <code>body-parser</code> package dependencies in our app.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>npm install express body-parser mongoose &#8211;save</p></blockquote>
+
+
+
+<p>Once these packages installed successfully, our <code>package.json</code> file will be updated automatically. Our latest file will be like this. </p>
+
+
+
+<h4>package.json</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/4ee47febabeb5741a3ac74586114deab.js"></script>
+
+
+
+<p>Notice <code>dependencies</code> section of our file, all these packages are mentioned there.</p>
+
+
+
+<h4>3. Creating Our Server</h4>
+
+
+
+<p>Let&#8217;s create a <code>server.js</code> file in the root directory of the application.</p>
+
+
+
+<h4>server.js</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/c70c858b4c19619a4eef83ba47ca9ad0.js"></script>
+
+
+
+<p>Let&#8217;s briefly review our above code. First of all, we imported the required dependencies in our server.js file. </p>
+
+
+
+<h4>body-parser</h4>
+
+
+
+<p>It is Node.js body parser middleware. It parse the incoming request bodies in a middleware before your handlers, available under the <code>req.body</code> property.</p>
+
+
+
+<p>Learn more about <a href="https://www.npmjs.com/package/body-parser#bodyparserurlencodedoptions">bodyParser.urlencoded([options])</a></p>
+
+
+
+<p>Learn more about <a href="https://www.npmjs.com/package/body-parser#bodyparserjsonoptions">bodyParser.json([options])</a></p>
+
+
+
+<p>Then, we define a default route using GET Http method. By default, it will return our message on default url.</p>
+
+
+
+<p>Finally, we are going to listen all incoming requests on port 3000. </p>
+
+
+
+<h4>4. Run the server</h4>
+
+
+
+<p>Once everything is all set, let&#8217;s wake up our server by running this command in our terminal window.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>node server.js</p><p>Server is listening on port 3000</p></blockquote>
+
+
+
+<h4>5. Create Configuration file</h4>
+
+
+
+<p>Let&#8217;s create a config file in our app, where we can define various constants like dbconnection or port number instead of hard-coded it everywhere. So, create a <code>config.js</code> file in your app folder.</p>
+
+
+
+<h4>config.js</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/b5e08f156f4f2b9fa51110db315aae50.js"></script>
+
+
+
+<p>So, here I mentioned two constants in <code>config.js</code> file.</p>
+
+
+
+<ul><li><em>url</em>: Our MongodB connection url.</li></ul>
+
+
+
+<ul><li><em>serverport</em>: Our listening server port.</li></ul>
+
+
+
+<h4>6. Connecting to Database</h4>
+
+
+
+<p>Let&#8217;s connect with our MongoDb database. Add these lines of codes in <code>server.js</code> file after the <code>app.use(bodyParser.json());</code></p>
+
+
+
+<script src="https://gist.github.com/zeptobook/e6c7f77fa89ba85c9262f88167eeb025.js"></script>
+
+
+
+<p>Also, we are going to replace our hard-coded server port with our config constant in server.js file</p>
+
+
+
+<script src="https://gist.github.com/zeptobook/bc97d3ed77259b990cc2320433f7f4eb.js"></script>
+
+
+
+<p>Here, you can see, we are now using <code>config.serverport</code> in app.listen().</p>
+
+
+
+<p>Now, run again the server using this command.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>node server.js<br>Server is listening on port 3000<br>Successfully connected to the database</p></blockquote>
+
+
+
+<h4>7. Creating Product Model</h4>
+
+
+
+<p>Let&#8217;s create a <code>product</code> model in our app folder in order to save the data in our db. Create a <code>product.model.js</code> file in your app.</p>
+
+
+
+<h4>product.model.js</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/c0ad767d175d0628b6b2e155366d753b.js"></script>
+
+
+
+<div class='code-block code-block-1' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5690888675427666",
+    enable_page_level_ads: true
+  });
+</script></div>
+<p>Here, we have defined our <code>ProductSchema</code> with following properties. Along with this, we also set <code>timestamps</code> property to <code>true</code>. This property will add two fields automatically to schema. These fields are : <code>createdAt</code> and <code>updatedAt</code> in your schema.</p>
+
+
+
+<h4>8. Creating our Controller&#8217;s functions</h4>
+
+
+
+<p>We are going to write all functions related to create, retrieve, update and delete products in our controller file. Let&#8217;s create a controller file named <code>product.controller.js</code> in your app folder.</p>
+
+
+
+<h4>product.controller.js</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/cf278628734f81d05613259bc4b15ba6.js"></script>
+
+
+
+<h4>9. Defining Product API&#8217;s Routes</h4>
+
+
+
+<p>Next step is to create our api routes. Create a <code>product.routes.js</code> file in your app folder.</p><div class='code-block code-block-3' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5690888675427666"
+     data-ad-slot="3736901313"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+
+
+<h4>product.routes.js</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/95013abbce74d4c9a746876c07af3253.js"></script>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: import this route file in our <em>server.js</em> file after these lines. See line 4 in the below code.</p></blockquote>
+
+
+
+<script src="https://gist.github.com/zeptobook/ba2f17aad90ecf15318ca1bd36da0356.js"></script>
+
+
+
+<h4>10. Enable the CORS</h4>
+
+
+
+<p>If you try to access your api routes through your client-side app, you might face <code>Access-Control-Allow-Origin</code> error messages. So, in order to avoid these message, we are also enabling <code>CORS</code> in our <code>server.js</code> file.</p>
+
+
+
+<h4>server.js</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/58b3a97869a70172afe50ea2053304a4.js"></script>
+
+
+
+<p>So, this will be our final <code>server.js</code> file.</p>
+
+
+
+<h4>server.js</h4>
+
+
+
+<script src="https://gist.github.com/zeptobook/d935459bc41d8d98f2ffd9f3336544e5.js"></script>
+
+
+
+<p>This will be our project structure.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img data-attachment-id="893" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/product-app-folder/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?fit=660%2C526&amp;ssl=1" data-orig-size="660,526" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Product-App folder" data-image-description data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?fit=300%2C239&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?fit=660%2C526&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?resize=495%2C395&#038;ssl=1" alt class="wp-image-893 jetpack-lazy-image" width="495" height="395" data-recalc-dims="1" data-lazy-srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?w=660&amp;ssl=1 660w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?resize=300%2C239&amp;ssl=1 300w" data-lazy-sizes="(max-width: 495px) 100vw, 495px" data-lazy-src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?resize=495%2C395&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="893" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/product-app-folder/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?fit=660%2C526&amp;ssl=1" data-orig-size="660,526" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Product-App folder" data-image-description="" data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?fit=300%2C239&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?fit=660%2C526&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?resize=495%2C395&#038;ssl=1" alt="" class="wp-image-893" width="495" height="395" srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?w=660&amp;ssl=1 660w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Product-App-folder.png?resize=300%2C239&amp;ssl=1 300w" sizes="(max-width: 495px) 100vw, 495px" data-recalc-dims="1" /></noscript></figure></div>
+
+
+
+<h3>Testing our REST APIs</h3>
+
+
+
+<p>Now, it&#8217;s time to test our all REST APIs for CRUD Operation.</p>
+
+
+
+<ul><li><strong>Create Product</strong></li></ul>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="880" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/creating-product/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=1538%2C1160&amp;ssl=1" data-orig-size="1538,1160" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Creating-Product" data-image-description data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=300%2C226&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=1024%2C772&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=1024%2C772&amp;ssl=1" alt class="wp-image-880 jetpack-lazy-image" data-lazy-srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?w=1538&amp;ssl=1 1538w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?resize=300%2C226&amp;ssl=1 300w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?resize=768%2C579&amp;ssl=1 768w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?resize=1024%2C772&amp;ssl=1 1024w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=1024%2C772&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="880" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/creating-product/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=1538%2C1160&amp;ssl=1" data-orig-size="1538,1160" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Creating-Product" data-image-description="" data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=300%2C226&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=1024%2C772&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?fit=1024%2C772&amp;ssl=1" alt="" class="wp-image-880" srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?w=1538&amp;ssl=1 1538w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?resize=300%2C226&amp;ssl=1 300w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?resize=768%2C579&amp;ssl=1 768w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Creating-Product.png?resize=1024%2C772&amp;ssl=1 1024w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure>
+
+
+
+<p>I have added few products in the database. See the below screen shot.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img data-attachment-id="881" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/list-of-products/" data-orig-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=788%2C1556&amp;ssl=1" data-orig-size="788,1556" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="List-of-Products" data-image-description data-medium-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=152%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=519%2C1024&amp;ssl=1" src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=519%2C1024&amp;ssl=1" alt="Http Post method to create a product" class="wp-image-881 jetpack-lazy-image" width="389" height="768" data-lazy-srcset="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?w=788&amp;ssl=1 788w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?resize=152%2C300&amp;ssl=1 152w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?resize=768%2C1517&amp;ssl=1 768w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?resize=519%2C1024&amp;ssl=1 519w" data-lazy-sizes="(max-width: 389px) 100vw, 389px" data-lazy-src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=519%2C1024&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="881" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/list-of-products/" data-orig-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=788%2C1556&amp;ssl=1" data-orig-size="788,1556" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="List-of-Products" data-image-description="" data-medium-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=152%2C300&amp;ssl=1" data-large-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=519%2C1024&amp;ssl=1" src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?fit=519%2C1024&amp;ssl=1" alt="Http Post method to create a product" class="wp-image-881" width="389" height="768" srcset="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?w=788&amp;ssl=1 788w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?resize=152%2C300&amp;ssl=1 152w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?resize=768%2C1517&amp;ssl=1 768w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/List-of-Products.png?resize=519%2C1024&amp;ssl=1 519w" sizes="(max-width: 389px) 100vw, 389px" /></noscript></figure></div>
+
+
+
+<ul><li><strong>Get All Products</strong></li></ul>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="883" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/get-all-products/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=1906%2C1482&amp;ssl=1" data-orig-size="1906,1482" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Get-All-Products" data-image-description data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=300%2C233&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=1024%2C796&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=1024%2C796&amp;ssl=1" alt="HTTP Get method to get all products" class="wp-image-883 jetpack-lazy-image" data-lazy-srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?w=1906&amp;ssl=1 1906w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?resize=300%2C233&amp;ssl=1 300w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?resize=768%2C597&amp;ssl=1 768w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?resize=1024%2C796&amp;ssl=1 1024w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=1024%2C796&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="883" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/get-all-products/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=1906%2C1482&amp;ssl=1" data-orig-size="1906,1482" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Get-All-Products" data-image-description="" data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=300%2C233&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=1024%2C796&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?fit=1024%2C796&amp;ssl=1" alt="HTTP Get method to get all products" class="wp-image-883" srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?w=1906&amp;ssl=1 1906w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?resize=300%2C233&amp;ssl=1 300w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?resize=768%2C597&amp;ssl=1 768w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-All-Products.png?resize=1024%2C796&amp;ssl=1 1024w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure>
+
+
+
+<ul><li><strong>Get Single Product</strong></li></ul>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="884" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/get-single-product/" data-orig-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=1474%2C1134&amp;ssl=1" data-orig-size="1474,1134" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Get-Single-Product" data-image-description data-medium-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=300%2C231&amp;ssl=1" data-large-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=1024%2C788&amp;ssl=1" src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=1024%2C788&amp;ssl=1" alt="HTTP Get method to get a single product" class="wp-image-884 jetpack-lazy-image" data-lazy-srcset="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?w=1474&amp;ssl=1 1474w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?resize=300%2C231&amp;ssl=1 300w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?resize=768%2C591&amp;ssl=1 768w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?resize=1024%2C788&amp;ssl=1 1024w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=1024%2C788&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="884" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/get-single-product/" data-orig-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=1474%2C1134&amp;ssl=1" data-orig-size="1474,1134" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Get-Single-Product" data-image-description="" data-medium-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=300%2C231&amp;ssl=1" data-large-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=1024%2C788&amp;ssl=1" src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?fit=1024%2C788&amp;ssl=1" alt="HTTP Get method to get a single product" class="wp-image-884" srcset="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?w=1474&amp;ssl=1 1474w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?resize=300%2C231&amp;ssl=1 300w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?resize=768%2C591&amp;ssl=1 768w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Get-Single-Product.png?resize=1024%2C788&amp;ssl=1 1024w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure>
+
+
+
+<ul><li><strong>Update Product</strong></li></ul>
+
+
+
+<p><strong>Before Update</strong></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img data-attachment-id="886" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/before-update/" data-orig-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?fit=856%2C360&amp;ssl=1" data-orig-size="856,360" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Before-Update" data-image-description data-medium-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?fit=300%2C126&amp;ssl=1" data-large-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?fit=856%2C360&amp;ssl=1" src="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?resize=428%2C180&#038;ssl=1" alt="Before Updating the product" class="wp-image-886 jetpack-lazy-image" width="428" height="180" data-recalc-dims="1" data-lazy-srcset="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?w=856&amp;ssl=1 856w, https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?resize=300%2C126&amp;ssl=1 300w, https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?resize=768%2C323&amp;ssl=1 768w" data-lazy-sizes="(max-width: 428px) 100vw, 428px" data-lazy-src="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?resize=428%2C180&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="886" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/before-update/" data-orig-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?fit=856%2C360&amp;ssl=1" data-orig-size="856,360" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Before-Update" data-image-description="" data-medium-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?fit=300%2C126&amp;ssl=1" data-large-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?fit=856%2C360&amp;ssl=1" src="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?resize=428%2C180&#038;ssl=1" alt="Before Updating the product" class="wp-image-886" width="428" height="180" srcset="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?w=856&amp;ssl=1 856w, https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?resize=300%2C126&amp;ssl=1 300w, https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Before-Update.png?resize=768%2C323&amp;ssl=1 768w" sizes="(max-width: 428px) 100vw, 428px" data-recalc-dims="1" /></noscript></figure></div>
+
+
+
+<p><strong>After Update</strong></p>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="887" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/after-update/" data-orig-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=1672%2C1130&amp;ssl=1" data-orig-size="1672,1130" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="After-Update" data-image-description data-medium-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=300%2C203&amp;ssl=1" data-large-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=1024%2C692&amp;ssl=1" src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=1024%2C692&amp;ssl=1" alt="After updating the product" class="wp-image-887 jetpack-lazy-image" data-lazy-srcset="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?w=1672&amp;ssl=1 1672w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?resize=300%2C203&amp;ssl=1 300w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?resize=768%2C519&amp;ssl=1 768w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?resize=1024%2C692&amp;ssl=1 1024w" data-lazy-sizes="(max-width: 1200px) 100vw, 1200px" data-lazy-src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=1024%2C692&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="887" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/after-update/" data-orig-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=1672%2C1130&amp;ssl=1" data-orig-size="1672,1130" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="After-Update" data-image-description="" data-medium-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=300%2C203&amp;ssl=1" data-large-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=1024%2C692&amp;ssl=1" src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?fit=1024%2C692&amp;ssl=1" alt="After updating the product" class="wp-image-887" srcset="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?w=1672&amp;ssl=1 1672w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?resize=300%2C203&amp;ssl=1 300w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?resize=768%2C519&amp;ssl=1 768w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/After-Update.png?resize=1024%2C692&amp;ssl=1 1024w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure>
+
+
+
+<ul><li><strong>Delete Product</strong></li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img data-attachment-id="888" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/deleting-product/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=1136%2C918&amp;ssl=1" data-orig-size="1136,918" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Deleting-Product" data-image-description data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=300%2C242&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=1024%2C827&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=1024%2C827&amp;ssl=1" alt class="wp-image-888 jetpack-lazy-image" width="512" height="414" data-lazy-srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?w=1136&amp;ssl=1 1136w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?resize=300%2C242&amp;ssl=1 300w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?resize=768%2C621&amp;ssl=1 768w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?resize=1024%2C827&amp;ssl=1 1024w" data-lazy-sizes="(max-width: 512px) 100vw, 512px" data-lazy-src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=1024%2C827&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img data-attachment-id="888" data-permalink="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/deleting-product/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=1136%2C918&amp;ssl=1" data-orig-size="1136,918" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Deleting-Product" data-image-description="" data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=300%2C242&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=1024%2C827&amp;ssl=1" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?fit=1024%2C827&amp;ssl=1" alt="" class="wp-image-888" width="512" height="414" srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?w=1136&amp;ssl=1 1136w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?resize=300%2C242&amp;ssl=1 300w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?resize=768%2C621&amp;ssl=1 768w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2019/01/Deleting-Product.png?resize=1024%2C827&amp;ssl=1 1024w" sizes="(max-width: 512px) 100vw, 512px" /></noscript></figure></div>
+
+
+
+<h3>Download</h3>
+
+
+
+<p>You can download all the project files from GitHub.</p>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link" href="https://github.com/zeptobook/NodeAPI">Download Project Files</a></div>
+
+
+
+<h3>Summary</h3>
+
+
+
+<p>In this blog, we learned about how to create a Node.js RESTful API app. We learned about how to perform CRUD operation on MongoDB database. Also, We learned about how to call our APIs endpoint in POSTMAN, and get the results.</p>
+
+
+
+<h3>Further Reading</h3>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-zeptobook"><div class="wp-block-embed__wrapper">
+<div class="oceanwp-oembed-wrap clr"><blockquote class="wp-embedded-content" data-secret="OkEGXpGjr2"><a href="https://www.zeptobook.com/install-node-js-and-npm-on-hosting-server/">Install Node.js and NPM on hosting server</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://www.zeptobook.com/install-node-js-and-npm-on-hosting-server/embed/#?secret=OkEGXpGjr2" data-secret="OkEGXpGjr2" width="600" height="338" title="&#8220;Install Node.js and NPM on hosting server&#8221; &#8212; ZeptoBook" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+</div></figure>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-zeptobook"><div class="wp-block-embed__wrapper">
+<div class="oceanwp-oembed-wrap clr"><blockquote class="wp-embedded-content" data-secret="ZyhVLWqvSF"><a href="https://www.zeptobook.com/update-angular-6-to-angular-7-version/">Update Angular 6 to Angular 7 version</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://www.zeptobook.com/update-angular-6-to-angular-7-version/embed/#?secret=ZyhVLWqvSF" data-secret="ZyhVLWqvSF" width="600" height="338" title="&#8220;Update Angular 6 to Angular 7 version&#8221; &#8212; ZeptoBook" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+</div></figure>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-zeptobook"><div class="wp-block-embed__wrapper">
+<div class="oceanwp-oembed-wrap clr"><blockquote class="wp-embedded-content" data-secret="YzBswuhzWr"><a href="https://www.zeptobook.com/creating-your-first-app-in-angular-7/">Creating your first app in Angular 7</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://www.zeptobook.com/creating-your-first-app-in-angular-7/embed/#?secret=YzBswuhzWr" data-secret="YzBswuhzWr" width="600" height="338" title="&#8220;Creating your first app in Angular 7&#8221; &#8212; ZeptoBook" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+</div></figure>
+<div class="post-views post-854 entry-meta">
+			<span class="post-views-icon dashicons dashicons-chart-bar"></span>
+			<span class="post-views-label">Post Views: </span>
+			<span class="post-views-count">18,877</span>
+			</div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/" data-text="How to create Restful CRUD API with Node.js MongoDB and Express.js" data-via="ZeptoBook" >Tweet</a></li><li class="share-facebook"><div class="fb-share-button" data-href="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/" data-layout="button_count"></div></li><li class="share-reddit"><div class="reddit_button"><iframe src="https://www.reddit.com/static/button/button1.html?newwindow=true&width=120&amp;url=https%3A%2F%2Fwww.zeptobook.com%2Fhow-to-create-restful-crud-api-with-node-js-mongodb-and-express-js%2F&amp;title=How%20to%20create%20Restful%20CRUD%20API%20with%20Node.js%20MongoDB%20and%20Express.js" height="22" width="120" scrolling="no" frameborder="0"></iframe></div></li><li class="share-tumblr"><a class="tumblr-share-button" target="_blank" href="https://www.tumblr.com/share" data-title="How to create Restful CRUD API with Node.js MongoDB and Express.js" data-content="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/" title="Share on Tumblr">Share on Tumblr</a></li><li class="share-pinterest"><div class="pinterest_button"><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.zeptobook.com%2Fhow-to-create-restful-crud-api-with-node-js-mongodb-and-express-js%2F&#038;media=https%3A%2F%2Fi2.wp.com%2Fwww.zeptobook.com%2Fwp-content%2Fuploads%2F2019%2F01%2FRESTfulAPIs_NodeJS__mongodb_large.png%3Ffit%3D728%252C360%26ssl%3D1&#038;description=How%20to%20create%20Restful%20CRUD%20API%20with%20Node.js%20MongoDB%20and%20Express.js" data-pin-do="buttonPin" data-pin-config="beside"><img src="https://i0.wp.com/assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png?w=1200&#038;ssl=1" data-recalc-dims="1" data-lazy-src="https://i0.wp.com/assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png?w=1200&amp;is-pending-load=1#038;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class=" jetpack-lazy-image"><noscript><img src="https://i0.wp.com/assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png?w=1200&#038;ssl=1" data-recalc-dims="1" /></noscript></a></div></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div></div><!-- .entry -->
+
+<div class="post-tags clr">
+	<span class="owp-tag-text">Tags: </span><a href="https://www.zeptobook.com/tag/express/" rel="tag">Express</a><span class="owp-sep">,</span> <a href="https://www.zeptobook.com/tag/mongodb/" rel="tag">MongoDB</a><span class="owp-sep">,</span> <a href="https://www.zeptobook.com/tag/mongoose/" rel="tag">Mongoose</a><span class="owp-sep">,</span> <a href="https://www.zeptobook.com/tag/node-js/" rel="tag">Node.js</a><span class="owp-sep">,</span> <a href="https://www.zeptobook.com/tag/rest-api/" rel="tag">Rest API</a></div>
+
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Continue Reading</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.zeptobook.com/install-node-js-and-npm-on-hosting-server/" rel="prev"><span class="title"><i class="fa fa-long-arrow-left"></i>Previous Post</span><span class="post-title">Install Node.js and NPM on hosting server</span></a></div><div class="nav-next"><a href="https://www.zeptobook.com/angular-7-crud-with-node-js-api/" rel="next"><span class="title"><i class="fa fa-long-arrow-right"></i>Next Post</span><span class="post-title">Angular 7 CRUD With Node.JS API</span></a></div></div>
+	</nav>
+
+
+<section id="author-bio" class="clr">
+
+	<div id="author-bio-inner">
+
+		<div class="author-bio-avatar">
+
+			<a href="https://www.zeptobook.com/author/admin/" title="Visit Author Page" rel="author" >
+				<img alt src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=100&#038;r=g" class="avatar avatar-100 photo jetpack-lazy-image" height="100" width="100" data-lazy-srcset="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=200&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=100&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=100&#038;r=g' srcset='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=200&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' /></noscript>			</a>
+
+		</div><!-- .author-bio-avatar -->
+
+		<div class="author-bio-content clr">
+
+			<h4 class="author-bio-title">
+				<a href="https://www.zeptobook.com/author/admin/" title="Visit Author Page">
+					Adesh				</a>
+			</h4><!-- .author-bio-title -->
+
+			
+				<div class="author-bio-description clr">
+					Hi, I am Adesh. I am a senior software engineer having more than 12 years of software development experience. I am a full stack developer and interested in writing the technical post on programming. I am currently working in New York City area.				</div><!-- author-bio-description -->
+
+			
+		</div>
+
+	</div><!-- #author-bio-inner -->
+
+</section><!-- #author-bio -->
+
+
+	<section id="related-posts" class="clr">
+
+		<h3 class="theme-heading related-posts-title">
+			<span class="text">You Might Also Like</span>
+		</h3>
+
+		<div class="oceanwp-row clr">
+
+			
+			
+				
+				<article class="related-post clr col span_1_of_3 col-1 post-568 post type-post status-publish format-standard has-post-thumbnail hentry category-node-js category-npm tag-angular tag-angular-7-0 tag-node-js tag-npm entry has-media">
+
+					
+						<figure class="related-post-media clr">
+
+							<a href="https://www.zeptobook.com/install-node-js-and-npm-on-hosting-server/" class="related-thumb">
+
+								<img width="300" height="183" src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?fit=300%2C183&amp;ssl=1" class="attachment-medium size-medium wp-post-image jetpack-lazy-image" alt="Install Node.js and NPM on hosting server" itemprop="image" data-attachment-id="571" data-permalink="https://www.zeptobook.com/install-node-js-and-npm-on-hosting-server/qhd9o1xcdv/" data-orig-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?fit=960%2C585&amp;ssl=1" data-orig-size="960,585" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="QHD9O1XCDV" data-image-description="&lt;p&gt;nodes installation&lt;/p&gt;
+" data-medium-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?fit=300%2C183&amp;ssl=1" data-large-file="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?fit=960%2C585&amp;ssl=1" data-lazy-srcset="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?w=960&amp;ssl=1 960w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?resize=300%2C183&amp;ssl=1 300w, https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?resize=768%2C468&amp;ssl=1 768w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://i2.wp.com/www.zeptobook.com/wp-content/uploads/2018/11/QHD9O1XCDV.jpg?fit=300%2C183&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />							</a>
+
+						</figure>
+
+					
+					<h3 class="related-post-title">
+						<a href="https://www.zeptobook.com/install-node-js-and-npm-on-hosting-server/" title="Install Node.js and NPM on hosting server" rel="bookmark">Install Node.js and NPM on hosting server</a>
+					</h3><!-- .related-post-title -->
+									
+					<time class="published" datetime="2018-11-11T18:52:43+00:00"><i class="icon-clock"></i>November 11, 2018</time>
+
+				</article><!-- .related-post -->
+				
+				
+			
+				
+				<article class="related-post clr col span_1_of_3 col-2 post-1401 post type-post status-publish format-standard has-post-thumbnail hentry category-node-js category-npm tag-npm tag-pnpm entry has-media">
+
+					
+						<figure class="related-post-media clr">
+
+							<a href="https://www.zeptobook.com/pnpm-fast-performant-replacement-of-npm/" class="related-thumb">
+
+								<img width="300" height="101" src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/pnpm-npm-comparison.png?fit=300%2C101&amp;ssl=1" class="attachment-medium size-medium wp-post-image jetpack-lazy-image" alt="PNPM-Fast Performant Replacement Of NPM" itemprop="image" data-attachment-id="1426" data-permalink="https://www.zeptobook.com/pnpm-fast-performant-replacement-of-npm/pnpm-npm-comparison/" data-orig-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/pnpm-npm-comparison.png?fit=678%2C229&amp;ssl=1" data-orig-size="678,229" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="pnpm-npm-comparison" data-image-description="" data-medium-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/pnpm-npm-comparison.png?fit=300%2C101&amp;ssl=1" data-large-file="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/pnpm-npm-comparison.png?fit=678%2C229&amp;ssl=1" data-lazy-srcset="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/pnpm-npm-comparison.png?w=678&amp;ssl=1 678w, https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/pnpm-npm-comparison.png?resize=300%2C101&amp;ssl=1 300w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://i0.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/pnpm-npm-comparison.png?fit=300%2C101&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />							</a>
+
+						</figure>
+
+					
+					<h3 class="related-post-title">
+						<a href="https://www.zeptobook.com/pnpm-fast-performant-replacement-of-npm/" title="PNPM-Fast Performant Replacement Of NPM" rel="bookmark">PNPM-Fast Performant Replacement Of NPM</a>
+					</h3><!-- .related-post-title -->
+									
+					<time class="published" datetime="2019-02-10T02:20:42+00:00"><i class="icon-clock"></i>February 10, 2019</time>
+
+				</article><!-- .related-post -->
+				
+				
+			
+				
+				<article class="related-post clr col span_1_of_3 col-3 post-1280 post type-post status-publish format-standard has-post-thumbnail hentry category-graphql category-node-js category-npm tag-express tag-graphql tag-node-js entry has-media">
+
+					
+						<figure class="related-post-media clr">
+
+							<a href="https://www.zeptobook.com/running-graphql-server-using-node-js-express-on-linux-hosting-server/" class="related-thumb">
+
+								<img width="300" height="153" src="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?fit=300%2C153&amp;ssl=1" class="attachment-medium size-medium wp-post-image jetpack-lazy-image" alt="Running GraphQL Server Using Node.JS  &#038; Express on Linux Hosting Server" itemprop="image" data-attachment-id="1373" data-permalink="https://www.zeptobook.com/running-graphql-server-using-node-js-express-on-linux-hosting-server/graphql-nodejs/" data-orig-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?fit=1017%2C519&amp;ssl=1" data-orig-size="1017,519" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="GraphQL-NodeJS" data-image-description="" data-medium-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?fit=300%2C153&amp;ssl=1" data-large-file="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?fit=1017%2C519&amp;ssl=1" data-lazy-srcset="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?w=1017&amp;ssl=1 1017w, https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?resize=300%2C153&amp;ssl=1 300w, https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?resize=768%2C392&amp;ssl=1 768w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://i1.wp.com/www.zeptobook.com/wp-content/uploads/2019/02/GraphQL-NodeJS.png?fit=300%2C153&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />							</a>
+
+						</figure>
+
+					
+					<h3 class="related-post-title">
+						<a href="https://www.zeptobook.com/running-graphql-server-using-node-js-express-on-linux-hosting-server/" title="Running GraphQL Server Using Node.JS  &#038; Express on Linux Hosting Server" rel="bookmark">Running GraphQL Server Using Node.JS  &#038; Express on Linux Hosting Server</a>
+					</h3><!-- .related-post-title -->
+									
+					<time class="published" datetime="2019-02-08T23:51:37+00:00"><i class="icon-clock"></i>February 8, 2019</time>
+
+				</article><!-- .related-post -->
+				
+				
+			
+		</div><!-- .oceanwp-row -->
+
+	</section><!-- .related-posts -->
+
+
+
+ 
+<section id="comments" class="comments-area clr has-comments">
+
+	
+	
+		<h3 class="theme-heading comments-title">
+			<span class="text">This Post Has 20 Comments</span>
+		</h3>
+
+		<ol class="comment-list">
+			
+			<li id="comment-197" class="comment-container">
+
+				<article class="comment even thread-even depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Alexander </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">8 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-197' data-commentid="197" data-postid="854" data-belowelement="comment-197" data-respondelement="respond" aria-label='Reply to Alexander'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>The best article on CRUD I&#8217;ve ever red</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			<ol class="children">
+
+			<li id="comment-199" class="comment-container">
+
+				<article class="comment byuser comment-author-admin bypostauthor odd alt depth-2 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link"><a href='http://www.zeptobook.com' rel='external nofollow' class='url'>Adesh</a> </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">8 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-199' data-commentid="199" data-postid="854" data-belowelement="comment-199" data-respondelement="respond" aria-label='Reply to Adesh'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Thank you</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+			<li id="comment-198" class="comment-container">
+
+				<article class="comment even thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/4f04653e58ab709f14bc2898b88f750c?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Alexander </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">8 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-198' data-commentid="198" data-postid="854" data-belowelement="comment-198" data-respondelement="respond" aria-label='Reply to Alexander'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>The best article on CRUD I&#8217;ve ever read</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-204" class="comment-container">
+
+				<article class="comment odd alt thread-even depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/4f055986ad463f1efa3737f4ec01dec4?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/4f055986ad463f1efa3737f4ec01dec4?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/4f055986ad463f1efa3737f4ec01dec4?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/4f055986ad463f1efa3737f4ec01dec4?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/4f055986ad463f1efa3737f4ec01dec4?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Rakesh S </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">9 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-204' data-commentid="204" data-postid="854" data-belowelement="comment-204" data-respondelement="respond" aria-label='Reply to Rakesh S'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Just what I was looking for really great article! I am really new to UI/frontend/REST but is it a thing in web development world to name things &#8220;res&#8221;, &#8220;req&#8221;, &#8220;err&#8221;. The code that I am looking at work has things named like that.</p>
+<p>Thanks again.</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			<ol class="children">
+
+			<li id="comment-205" class="comment-container">
+
+				<article class="comment byuser comment-author-admin bypostauthor even depth-2 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link"><a href='http://www.zeptobook.com' rel='external nofollow' class='url'>Adesh</a> </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">9 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-205' data-commentid="205" data-postid="854" data-belowelement="comment-205" data-respondelement="respond" aria-label='Reply to Adesh'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Thank you Rakesh</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+			<li id="comment-206" class="comment-container">
+
+				<article class="comment odd alt thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/6bf5aa4f3f6f16a027ae5aac571d1825?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/6bf5aa4f3f6f16a027ae5aac571d1825?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/6bf5aa4f3f6f16a027ae5aac571d1825?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/6bf5aa4f3f6f16a027ae5aac571d1825?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/6bf5aa4f3f6f16a027ae5aac571d1825?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">sandy </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">11 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-206' data-commentid="206" data-postid="854" data-belowelement="comment-206" data-respondelement="respond" aria-label='Reply to sandy'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Hey guys,</p>
+<p>MongooseError: The <code>uri</code> parameter to <code>openUri()</code> must be a string, got &#8220;undefined&#8221;. Make sure the first parameter to <code>mongoose.connect()</code> or <code>mongoose.createConnection()</code> is a string.</p>
+<p>Happend after created config.js  when running node server.js.</p>
+<p>I got this error . Google results this &#8211;&gt; <a href="https://stackoverflow.com/questions/51770772/mongoose-connect-first-argument-should-be-string-received-undefined" rel="nofollow">https://stackoverflow.com/questions/51770772/mongoose-connect-first-argument-should-be-string-received-undefined</a></p>
+<p>Cofused and stuck. Any help would be appreciable. Have a nice day</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+		<li class="pingback even thread-even depth-1" id="comment-209">
+
+			<article id="comment-209" class="comment-container">
+				<p>Pingback: <span><span itemprop="name"><a href='https://www.zeptobook.com/angular-7-crud-with-node-js-api/' rel='external nofollow' class='url'>Angular 7 CRUD With Node.JS API - ZeptoBook</a></span></span> </p>
+			</article>
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-211" class="comment-container">
+
+				<article class="comment odd alt thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/1c0b59cf8ebcff95c5a2fc08cba1f956?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/1c0b59cf8ebcff95c5a2fc08cba1f956?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/1c0b59cf8ebcff95c5a2fc08cba1f956?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/1c0b59cf8ebcff95c5a2fc08cba1f956?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/1c0b59cf8ebcff95c5a2fc08cba1f956?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Tharinda Divakara </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">13 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-211' data-commentid="211" data-postid="854" data-belowelement="comment-211" data-respondelement="respond" aria-label='Reply to Tharinda Divakara'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>The article explains everything in details.</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			<ol class="children">
+
+			<li id="comment-212" class="comment-container">
+
+				<article class="comment byuser comment-author-admin bypostauthor even depth-2 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/43aa217d014f167a327e89268d2ba8b6?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link"><a href='http://www.zeptobook.com' rel='external nofollow' class='url'>Adesh</a> </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">13 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-212' data-commentid="212" data-postid="854" data-belowelement="comment-212" data-respondelement="respond" aria-label='Reply to Adesh'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Thanks</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+
+			<li id="comment-673" class="comment-container">
+
+				<article class="comment odd alt thread-even depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/44b20ece759dea2973bed8c7ce0f8866?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/44b20ece759dea2973bed8c7ce0f8866?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/44b20ece759dea2973bed8c7ce0f8866?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/44b20ece759dea2973bed8c7ce0f8866?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/44b20ece759dea2973bed8c7ce0f8866?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Ankit </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">27 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-673' data-commentid="673" data-postid="854" data-belowelement="comment-673" data-respondelement="respond" aria-label='Reply to Ankit'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Hello sir,</p>
+<p>Could you explain what is happening on line 22 in final server.js file where we are requiring product.routes.js file.<br />
+I understood that we are requiring routes file, but why are we passing (app) as the parameter and how app is being used in product.routes.js file.</p>
+<p>Thank you</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-914" class="comment-container">
+
+				<article class="comment even thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/d6b3d7dc8c05916d6b502a0a2fb4d12e?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/d6b3d7dc8c05916d6b502a0a2fb4d12e?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/d6b3d7dc8c05916d6b502a0a2fb4d12e?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/d6b3d7dc8c05916d6b502a0a2fb4d12e?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/d6b3d7dc8c05916d6b502a0a2fb4d12e?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Edward </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">28 Jan 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-914' data-commentid="914" data-postid="854" data-belowelement="comment-914" data-respondelement="respond" aria-label='Reply to Edward'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Hi Adesh i really appreciate the efforts portrayed in this blog. Your article is comprehensive and very clear making it  my go to reference whenever i&#8217;m stack and need help in creating Rest Apis. However,I could really appreciate your help in embedding mongoose schemas. I have basic understanding about the workings of mongoose but i can&#8217;t find my way through embedding documents. Thanks.</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+		<li class="pingback odd alt thread-even depth-1" id="comment-3137">
+
+			<article id="comment-3137" class="comment-container">
+				<p>Pingback: <span><span itemprop="name"><a href='https://www.zeptobook.com/running-graphql-server-using-node-js-express-on-linux-hosting-server/' rel='external nofollow' class='url'>Running GraphQL Server Using Node.JS &amp; Express on Linux Hosting Server - ZeptoBook</a></span></span> </p>
+			</article>
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-5223" class="comment-container">
+
+				<article class="comment even thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/741c6c3094abe4dc68603d36ecdc3713?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/741c6c3094abe4dc68603d36ecdc3713?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/741c6c3094abe4dc68603d36ecdc3713?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/741c6c3094abe4dc68603d36ecdc3713?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/741c6c3094abe4dc68603d36ecdc3713?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Joel Meaders </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">17 Feb 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-5223' data-commentid="5223" data-postid="854" data-belowelement="comment-5223" data-respondelement="respond" aria-label='Reply to Joel Meaders'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Thanks a lot for this tutorial. </p>
+<p>I&#8217;m not done yet but I wanted to share something I had an issue with and how it was solved as it might be worth mentioning. In part 6 (connecting to db) I was getting the error &#8220;MongoParseError: URI malformed, cannot be parsed&#8221;. I ended up figuring out it was because I had special characters in the password for my mongodb user. I fixed it by modifying config.js with the layout here <a href="https://stackoverflow.com/a/54626342" rel="nofollow">https://stackoverflow.com/a/54626342</a> and then adapting mongoose.connect in server.js to use the auth portion.</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-9333" class="comment-container">
+
+				<article class="comment odd alt thread-even depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/da7b150364598d9f054cac871bdd3c10?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/da7b150364598d9f054cac871bdd3c10?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/da7b150364598d9f054cac871bdd3c10?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/da7b150364598d9f054cac871bdd3c10?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/da7b150364598d9f054cac871bdd3c10?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link"><a href='https://cihanasan.wordpress.com/' rel='external nofollow' class='url'>Cihan</a> </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">27 Mar 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-9333' data-commentid="9333" data-postid="854" data-belowelement="comment-9333" data-respondelement="respond" aria-label='Reply to Cihan'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Great article</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-10594" class="comment-container">
+
+				<article class="comment even thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/90495b95d4b7295b9774578cd06230eb?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/90495b95d4b7295b9774578cd06230eb?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/90495b95d4b7295b9774578cd06230eb?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/90495b95d4b7295b9774578cd06230eb?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/90495b95d4b7295b9774578cd06230eb?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">fernando </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">3 Apr 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-10594' data-commentid="10594" data-postid="854" data-belowelement="comment-10594" data-respondelement="respond" aria-label='Reply to fernando'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Adesh, Mongoose encapsulates bank functions for findOne, find, insert, update, updateOne, and remove? Is that the idea?</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-11895" class="comment-container">
+
+				<article class="comment odd alt thread-even depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/77e3c0f63ed395bbfa9b4978d780f704?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/77e3c0f63ed395bbfa9b4978d780f704?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/77e3c0f63ed395bbfa9b4978d780f704?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/77e3c0f63ed395bbfa9b4978d780f704?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/77e3c0f63ed395bbfa9b4978d780f704?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Anthony </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">14 Apr 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-11895' data-commentid="11895" data-postid="854" data-belowelement="comment-11895" data-respondelement="respond" aria-label='Reply to Anthony'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Great and easy explanation, thank you for sharing</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-12477" class="comment-container">
+
+				<article class="comment even thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Nayanka </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">19 Apr 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-12477' data-commentid="12477" data-postid="854" data-belowelement="comment-12477" data-respondelement="respond" aria-label='Reply to Nayanka'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Hi sir please why do you used res.send in your controller file.And not res.json({})  ?</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-12565" class="comment-container">
+
+				<article class="comment odd alt thread-even depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/e6ff1a465569c7cce2d57a90155f8838?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">Nayanka </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">25 Apr 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-12565' data-commentid="12565" data-postid="854" data-belowelement="comment-12565" data-respondelement="respond" aria-label='Reply to Nayanka'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>super article.Dommage juste qu&#8217;il n&#8217;ai pas de notion de relation avec d&#8217;autres modèles ..</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-12621" class="comment-container">
+
+				<article class="comment even thread-odd thread-alt depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/2d7d42e0e42f2223d826e55ea4664cd9?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/2d7d42e0e42f2223d826e55ea4664cd9?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/2d7d42e0e42f2223d826e55ea4664cd9?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/2d7d42e0e42f2223d826e55ea4664cd9?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/2d7d42e0e42f2223d826e55ea4664cd9?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">wonder </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">3 May 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-12621' data-commentid="12621" data-postid="854" data-belowelement="comment-12621" data-respondelement="respond" aria-label='Reply to wonder'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>Thank you Adesh for great article. Can you please explain how to add and select a product with variations, aka sizes, colors.<br />
+How do I have to update in the product.model.js file the ProductSchema?<br />
+size: [ ] &amp; color: [ ]  as an empty array?<br />
+How about product.controller.js?  size: req.body.size &amp; color: req.body.color ?<br />
+Thank you</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+
+			<li id="comment-12820" class="comment-container">
+
+				<article class="comment odd alt thread-even depth-1 comment-body">
+
+					<img alt src="https://secure.gravatar.com/avatar/61fd94a30ab1a211a422ff333c50ff67?s=150&#038;r=g" class="avatar avatar-150 photo jetpack-lazy-image" height="150" width="150" data-lazy-srcset="https://secure.gravatar.com/avatar/61fd94a30ab1a211a422ff333c50ff67?s=300&#038;r=g 2x" data-lazy-src="https://secure.gravatar.com/avatar/61fd94a30ab1a211a422ff333c50ff67?s=150&amp;is-pending-load=1#038;r=g" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://secure.gravatar.com/avatar/61fd94a30ab1a211a422ff333c50ff67?s=150&#038;r=g' srcset='https://secure.gravatar.com/avatar/61fd94a30ab1a211a422ff333c50ff67?s=300&#038;r=g 2x' class='avatar avatar-150 photo' height='150' width='150' /></noscript>
+		            <div class="comment-content">
+		                <div class="comment-author">
+		                    <h3 class="comment-link">doron </h3>
+
+		                    <span class="comment-meta commentmetadata">
+		                    			                        	<span class="comment-date">20 May 2019</span>
+		                        
+		                        <a rel='nofollow' class='comment-reply-link' href='#comment-12820' data-commentid="12820" data-postid="854" data-belowelement="comment-12820" data-respondelement="respond" aria-label='Reply to doron'>Reply</a>
+		                        
+		                    			                    </span>
+		                </div>
+
+		                <div class="clr"></div>
+
+		                <div class="comment-entry">
+		                    
+		                    <div class="comment-content">
+		                        <p>i can&#8217;t make the code to work in POST.<br />
+my database look like this:<br />
+{<br />
+    &#8220;_id&#8221;: {<br />
+        &#8220;$oid&#8221;: &#8220;5ce2b7a390c92e22404ab876&#8221;<br />
+    },<br />
+    &#8220;title&#8221;: &#8220;No product title&#8221;,<br />
+    &#8220;createdAt&#8221;: {<br />
+        &#8220;$date&#8221;: &#8220;2019-05-20T14:20:19.636Z&#8221;<br />
+    },<br />
+    &#8220;updatedAt&#8221;: {<br />
+        &#8220;$date&#8221;: &#8220;2019-05-20T14:20:19.636Z&#8221;<br />
+    },<br />
+    &#8220;__v&#8221;: 0<br />
+}</p>
+<p>i&#8217;m not getting any error message.</p>
+		                    </div>
+		                </div>
+		            </div>
+
+				</article><!-- #comment-## -->
+
+			</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.zeptobook.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<div class="comment-textarea"><textarea name="comment" id="comment" cols="39" rows="4" tabindex="100" class="textarea-comment" placeholder="Your Comment Here..."></textarea></div><div class="comment-form-author"><input type="text" name="author" id="author" value="" placeholder="Name (required)" size="22" tabindex="101" aria-required="true" class="input-name" /></div>
+<div class="comment-form-email"><input type="text" name="email" id="email" value="" placeholder="Email (required)" size="22" tabindex="102" aria-required="true" class="input-email" /></div>
+<div class="comment-form-url"><input type="text" name="url" id="url" value="" placeholder="Website" size="22" tabindex="103" class="input-website" /></div>
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='854' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c779a0fbbf" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="68"/></p>			</form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</section><!-- #comments -->
+</article>
+				
+			</div><!-- #content -->
+
+			
+		</div><!-- #primary -->
+
+		
+
+<aside id="right-sidebar" class="sidebar-container widget-area sidebar-primary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+
+	
+	<div id="right-sidebar-inner" class="clr">
+
+		<div id="search-2" class="sidebar-box widget_search clr">
+<form method="get" class="searchform" id="searchform" action="https://www.zeptobook.com/">
+	<input type="text" class="field" name="s" id="s" placeholder="Search">
+	</form></div><div id="categories-6" class="sidebar-box widget_categories clr"><h4 class="widget-title">Categories</h4><form action="https://www.zeptobook.com" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="55">.Net Core&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="2">Angular&nbsp;&nbsp;(18)</option>
+	<option class="level-0" value="21">Angular 7.0&nbsp;&nbsp;(16)</option>
+	<option class="level-0" value="56">Asp.Net Core&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="3">Blog&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="4">GraphQL&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="60">JavaScript&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="75">MongoDB&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="33">Node.js&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="34">NPM&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="84">Tech&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="26">TypeScript&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="1">Uncategorized&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="46">Visual Studio&nbsp;&nbsp;(1)</option>
+</select>
+</form>
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</div><div id="email-subscribers-form-2" class="sidebar-box widget_email-subscribers-form clr"><h4 class="widget-title">Subscribe to Email</h4>
+        <div class="emaillist">
+            <form action="#" method="post" class="es_subscription_form es_shortcode_form" id="es_subscription_form_1558552594" data-source="ig-es" >
+				                    <div class="es_caption">Subscribe to Email</div>
+								<div class="es-field-wrap"><label>Name<br/><input type="text" name="name" placeholder="Enter Name" value="" /></label></div>				<div class="es-field-wrap"><label>Email*<br/><input class="es_required_field es_txt_email" type="email" name="email" value="" placeholder="Enter Email Address" required/></label></div>				<input type="hidden" name="lists[]" value="2" />				<input type="hidden" name="form_id" value="1" />
+                <input type="hidden" name="es_email_page" value="854"/>
+                <input type="hidden" name="es_email_page_url" value="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/"/>
+                <input type="hidden" name="status" value="Unconfirmed"/>
+                <input type="hidden" name="es-subscribe" id="es-subscribe" value="96e7523201"/>
+                <label style="position:absolute;top:-99999px;left:-99999px;z-index:-99;"><input type="text" name="es_hp_46496138f9" class="es_required_field" tabindex="-1" autocomplete="-1"/></label>
+								                <input type="submit" name="submit" class="es_subscription_form_submit es_submit_button es_textbox_button" id="es_subscription_form_submit_1558552594" value="Subscribe"/>
+
+
+				                <span class="es_spinner_image" id="spinner-image"><img src="https://www.zeptobook.com/wp-content/plugins/email-subscribers/public/images/spinner.gif"/></span>
+
+            </form>
+
+            <span class="es_subscription_message success" id="es_subscription_message_1558552594"></span>
+        </div>
+
+		</div><div id="post_views_counter_list_widget-6" class="sidebar-box widget_post_views_counter_list_widget clr"><h4 class="widget-title">Most Viewed Posts</h4>
+		<ul>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js/">How to create Restful CRUD API with Node.js MongoDB and Express.js</a> <span class="count">(18,877)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/angular-7-crud-with-node-js-api/">Angular 7 CRUD With Node.JS API</a> <span class="count">(10,454)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/custom-directives-in-angular-7/">Custom Directives in Angular 7</a> <span class="count">(8,926)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/single-page-application-using-asp-net-core-2-2-and-angular/">Single Page Application using Asp.Net Core 2.2 and Angular</a> <span class="count">(6,255)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/stop-using-elementref-for-dom-manipulation-in-angular/">Stop Using ElementRef! For DOM Manipulation In Angular</a> <span class="count">(6,078)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/javascript-fundamentals-every-beginners-should-know/">JavaScript Fundamentals Every Beginner Should Know</a> <span class="count">(5,149)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/share-data-between-components-in-angular/">Share data between components in Angular</a> <span class="count">(5,146)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/reactive-form-programming-in-angular-7/">Reactive form programming in Angular 7</a> <span class="count">(4,905)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/angular-material-table-with-paging-sorting-and-filtering/">Angular Material Table With Paging, Sorting And Filtering</a> <span class="count">(2,970)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/creating-your-first-app-in-angular-7/">Creating your first app in Angular 7</a> <span class="count">(2,285)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/cool-features-of-generics-in-typescript/">Cool features of Generics in TypeScript</a> <span class="count">(2,251)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/learn-about-observables-observers-and-operators-of-rxjs-angular/">Learn About Observables, Observers And Operators of RxJS &#8211; Angular</a> <span class="count">(2,122)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/eleven-ways-to-learn-javascript-array-iteration-effectively/">Eleven Ways To Learn Javascript Array Iteration Effectively</a> <span class="count">(2,023)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/ng-template-ng-container-and-ngtemplateoutlet-in-angular/">ng-template, ng-container And ngTemplateOutlet In Angular</a> <span class="count">(1,817)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/update-angular-6-to-angular-7-version/">Update Angular 6 to Angular 7 version</a> <span class="count">(1,735)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/destructuring-in-javascript-can-make-your-code-short-and-cleaner/">Destructuring In JavaScript Can Make Your Code Short And Cleaner</a> <span class="count">(1,467)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/this-is-why-learning-new-javascript-es6-syntax-is-so-famous/">This Is Why Learning New JavaScript ES6 Syntax Is So Famous!</a> <span class="count">(1,431)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/angular-best-practices-for-building-single-page-application/">Angular Best Practices For Building Single Page Application</a> <span class="count">(1,421)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/pipes-in-angular/">Pipes in Angular</a> <span class="count">(1,393)</span>
+		    </li>
+		    <li>
+					<a class="post-title" href="https://www.zeptobook.com/learn-functions-in-typescript/">Learn Functions In TypeScript</a> <span class="count">(1,104)</span>
+		    </li>
+		</ul></div><div id="twitter_timeline-3" class="sidebar-box widget_twitter_timeline clr"><h4 class="widget-title">Follow me on Twitter</h4><a class="twitter-timeline" data-theme="light" data-link-color="#f96e5b" data-border-color="#e8e8e8" data-tweet-limit="2" data-lang="EN" data-partner="jetpack" href="https://twitter.com/@zeptobook" href="https://twitter.com/@zeptobook">My Tweets</a></div><div id="facebook-likebox-3" class="sidebar-box widget_facebook_likebox clr"><h4 class="widget-title"><a href="https://www.facebook.com/zeptobook/">Follow me on Facebook</a></h4>		<div id="fb-root"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/zeptobook/" data-width="340"  data-height="580" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+		<div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/zeptobook/"><a href="https://www.facebook.com/zeptobook/">Follow me on Facebook</a></blockquote></div>
+		</div>
+		</div>
+	</div><!-- #sidebar-inner -->
+
+	
+</aside><!-- #right-sidebar -->
+
+
+	</div><!-- #content-wrap -->
+
+	
+
+        </main><!-- #main -->
+
+        
+        
+        
+            
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+    
+    <div id="footer-inner" class="clr">
+
+        
+
+<div id="footer-widgets" class="oceanwp-row clr">
+
+	
+	<div class="footer-widgets-inner container">
+
+        			<div class="footer-box span_1_of_4 col col-1">
+				<div id="archives-4" class="footer-widget widget_archive clr"><h4 class="widget-title">Archives</h4>		<label class="screen-reader-text" for="archives-dropdown-4">Archives</label>
+		<select id="archives-dropdown-4" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://www.zeptobook.com/2019/05/'> May 2019 &nbsp;(1)</option>
+	<option value='https://www.zeptobook.com/2019/04/'> April 2019 &nbsp;(3)</option>
+	<option value='https://www.zeptobook.com/2019/03/'> March 2019 &nbsp;(3)</option>
+	<option value='https://www.zeptobook.com/2019/02/'> February 2019 &nbsp;(4)</option>
+	<option value='https://www.zeptobook.com/2019/01/'> January 2019 &nbsp;(3)</option>
+	<option value='https://www.zeptobook.com/2018/12/'> December 2018 &nbsp;(6)</option>
+	<option value='https://www.zeptobook.com/2018/11/'> November 2018 &nbsp;(5)</option>
+	<option value='https://www.zeptobook.com/2018/10/'> October 2018 &nbsp;(11)</option>
+
+		</select>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-4" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+/* ]]> */
+</script>
+
+		</div>			</div><!-- .footer-one-box -->
+
+							<div class="footer-box span_1_of_4 col col-2">
+					<div id="categories-4" class="footer-widget widget_categories clr"><h4 class="widget-title">Categories</h4><form action="https://www.zeptobook.com" method="get"><label class="screen-reader-text" for="categories-dropdown-4">Categories</label><select  name='cat' id='categories-dropdown-4' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="55">.Net Core&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="2">Angular&nbsp;&nbsp;(18)</option>
+	<option class="level-0" value="21">Angular 7.0&nbsp;&nbsp;(16)</option>
+	<option class="level-0" value="56">Asp.Net Core&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="3">Blog&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="4">GraphQL&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="60">JavaScript&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="75">MongoDB&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="33">Node.js&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="34">NPM&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="84">Tech&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="26">TypeScript&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="1">Uncategorized&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="46">Visual Studio&nbsp;&nbsp;(1)</option>
+</select>
+</form>
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "categories-dropdown-4" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</div>				</div><!-- .footer-one-box -->
+						
+							<div class="footer-box span_1_of_4 col col-3 ">
+					<div id="eu_cookie_law_widget-3" class="footer-widget widget_eu_cookie_law_widget clr"><div
+	class="hide-on-button"
+	data-hide-timeout="30"
+	data-consent-expiration="180"
+	id="eu-cookie-law"
+>
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept" />
+	</form>
+
+	Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br />
+To find out more, including how to control cookies, see here:
+	<a href="https://automattic.com/cookies/" >
+		Cookie Policy	</a>
+</div>
+</div>				</div><!-- .footer-one-box -->
+			
+							<div class="footer-box span_1_of_4 col col-4">
+					<div id="rss_links-3" class="footer-widget widget_rss_links clr"><h4 class="widget-title">RSS</h4><ul><li><a target="_self" href="https://www.zeptobook.com/feed/" title="Subscribe to Posts">RSS - Posts</a></li><li><a target="_self" href="https://www.zeptobook.com/comments/feed/" title="Subscribe to Comments">RSS - Comments</a></li></ul>
+</div>				</div><!-- .footer-box -->
+			
+		
+	</div><!-- .container -->
+
+	
+</div><!-- #footer-widgets -->
+
+
+
+<div id="footer-bottom" class="clr no-footer-nav">
+
+	
+	<div id="footer-bottom-inner" class="container clr">
+
+		
+		
+			<div id="copyright" class="clr" role="contentinfo">
+				Copyright 2018-2020 ZeptoBook.com All rights reserved. <a href="https://www.zeptobook.com/disclaimer/">Disclaimer</a>			</div><!-- #copyright -->
+
+		
+	</div><!-- #footer-bottom-inner -->
+
+	
+</div><!-- #footer-bottom -->
+
+        
+    </div><!-- #footer-inner -->
+
+    
+</footer><!-- #footer -->            
+        
+                        
+    </div><!-- #wrap -->
+
+    
+</div><!-- #outer-wrap -->
+
+
+
+<a id="scroll-top" class="scroll-top-right" href="#"><span class="fa fa-angle-up"></span></a>
+
+
+<div id="sidr-close">
+	<a href="#" class="toggle-sidr-close">
+		<i class="icon icon-close"></i><span class="close-text">Close Menu</span>
+	</a>
+</div>
+    
+    
+<div id="mobile-menu-search" class="clr">
+	<form method="get" action="https://www.zeptobook.com/" class="mobile-searchform">
+		<input type="search" name="s" autocomplete="off" placeholder="Search" />
+		<button type="submit" class="searchform-submit">
+			<i class="icon icon-magnifier"></i>
+		</button>
+			</form>
+</div><!-- .mobile-menu-search -->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5690888675427666",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+	<div style="display:none">
+	<div class="grofile-hash-map-442549bdd4f1ea231487dc47cbd2b154">
+	</div>
+	<div class="grofile-hash-map-4f04653e58ab709f14bc2898b88f750c">
+	</div>
+	<div class="grofile-hash-map-442549bdd4f1ea231487dc47cbd2b154">
+	</div>
+	<div class="grofile-hash-map-4f055986ad463f1efa3737f4ec01dec4">
+	</div>
+	<div class="grofile-hash-map-6bf5aa4f3f6f16a027ae5aac571d1825">
+	</div>
+	<div class="grofile-hash-map-1c0b59cf8ebcff95c5a2fc08cba1f956">
+	</div>
+	<div class="grofile-hash-map-44b20ece759dea2973bed8c7ce0f8866">
+	</div>
+	<div class="grofile-hash-map-d6b3d7dc8c05916d6b502a0a2fb4d12e">
+	</div>
+	<div class="grofile-hash-map-741c6c3094abe4dc68603d36ecdc3713">
+	</div>
+	<div class="grofile-hash-map-da7b150364598d9f054cac871bdd3c10">
+	</div>
+	<div class="grofile-hash-map-90495b95d4b7295b9774578cd06230eb">
+	</div>
+	<div class="grofile-hash-map-8c77406732773b328989a7037dd75b5b">
+	</div>
+	<div class="grofile-hash-map-e6ff1a465569c7cce2d57a90155f8838">
+	</div>
+	<div class="grofile-hash-map-2d7d42e0e42f2223d826e55ea4664cd9">
+	</div>
+	<div class="grofile-hash-map-61fd94a30ab1a211a422ff333c50ff67">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/www.zeptobook.com\/how-to-create-restful-crud-api-with-node-js-mongodb-and-express-js\/":854};
+	</script>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+			<script>
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( 'undefined' !== typeof FB ) {
+					FB.XFBML.parse();
+				}
+			} );
+			</script>
+			<script id="tumblr-js" type="text/javascript" src="https://assets.tumblr.com/share-button.js"></script>					<script type="text/javascript">
+				// Pinterest shared resources
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				s.setAttribute('data-pin-hover', true);				s.src = window.location.protocol + "//assets.pinterest.com/js/pinit.js";
+				var x = document.getElementsByTagName("script")[0];
+				x.parentNode.insertBefore(s, x);
+				// if 'Pin it' button has 'counts' make container wider
+				jQuery(window).load( function(){ jQuery( 'li.share-pinterest a span:visible' ).closest( '.share-pinterest' ).width( '80px' ); } );
+			</script>
+		<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/photon/photon.min.js'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201921'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pvcArgsFrontend = {"mode":"ajax","requestURL":"https:\/\/www.zeptobook.com\/wp-content\/plugins\/post-views-counter\/includes\/ajax.php","postID":"854","nonce":"5e77a20621"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.zeptobook.com/wp-content/plugins/post-views-counter/js/frontend.js?ver=1.2.14'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2019Mayaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/modules/wpgroho.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.2.1/wp-includes/js/comment-reply.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.2.1/wp-includes/js/imagesloaded.min.js'></script>
+<script type='text/javascript' src='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=1.6.7'></script>
+<script type='text/javascript' src='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=1.6.7'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"drop_down","sidrSource":"#sidr-close, #site-navigation, #mobile-menu-search","sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"icon","verticalHeaderTarget":"icon","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/js/main.min.js?ver=1.6.7'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/widgets/eu-cookie-law/eu-cookie-law.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490","locale":"en_US"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/facebook-embed.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/twitter-timeline.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/lazy-images/js/lazy-images.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.2.1/wp-includes/js/wp-embed.min.js'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.zeptobook.com/wp-content/themes/oceanwp/assets/js//third/html5.min.js?ver=1.6.7'></script>
+<![endif]-->
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/spin.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/jquery.spin.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/www.zeptobook.com\/wp-admin\/admin-ajax.php","nonce":"9a8f57889b","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/www.zeptobook.com\/wp-login.php?redirect_to=https%3A%2F%2Fwww.zeptobook.com%2Fhow-to-create-restful-crud-api-with-node-js-mongodb-and-express-js%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/carousel/jetpack-carousel.min.js'></script>
+<script async="async" type='text/javascript' src='https://www.zeptobook.com/wp-content/plugins/akismet/_inc/form.js?ver=4.1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/7.3/_inc/build/sharedaddy/sharing.min.js'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type='text/javascript' src='https://stats.wp.com/e-201921.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.3',blog:'153383584',post:'854',tz:'0',srv:'www.zeptobook.com'} ]);
+	_stq.push([ 'clickTrackerInit', '153383584', '854' ]);
+</script>
+</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 193/392 objects using disk
+Page Caching using disk: enhanced 
+Database Caching 10/77 queries in 0.070 seconds using disk
+
+Served from: www.zeptobook.com @ 2019-05-22 19:16:34 by W3 Total Cache
+-->
