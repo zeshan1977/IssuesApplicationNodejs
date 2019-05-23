@@ -20,5 +20,5 @@ node server.js
 
 You can browse the apis at <http://localhost:3000>
 
-Test via postman. Adding json text inside the body and sending
+Test via postman. Adding json text inside the body and sending or you can test it with curl
 
